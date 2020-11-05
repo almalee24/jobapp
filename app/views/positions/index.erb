@@ -1,14 +1,10 @@
-<h1>Browse our Positons</h1>
-<div class="container">
-    <div class="row"> 
-        <div class="col-xs-6">
-            <% @positions.each do |position| %>
-                <h2><%= position.title %></h2><br>
-                <h3><%= position.company %></h3><br>
-                <h3><%= position.location %></h3><br>
-                <h4><%= Nokogiri::HTML(position[:description]).xpath("//text()").text.gsub("Description", "")%></h4><br><br>
-            <% end %>
-            
-        </div>
-    </div>
-</div>
+
+<h1>Welcome to Magic Job Portal</h1>
+<h4>Search by job title:</h4>
+
+<%= form_tag(search_path, :method => 'get') do %>
+    <%= text_field_tag :search, params[:search] %>
+    <span class="input-group-btn">
+        <%= submit_tag "Search" %>
+    </span>
+<% end %>
