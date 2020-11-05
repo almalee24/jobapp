@@ -146,3 +146,8 @@ header{
 .shared-links a:hover{
     text-decoration: underline;
 }
+
+ion-icon{
+    float: left;
+    font-size: 24px;
+}
