@@ -13,3 +13,136 @@
  *= require_tree .
  *= require_self
  */
+
+ *{
+     margin: 0px;
+     color: #000
+ }
+
+ body{
+     background-color: #f2f2f2;
+ }
+
+ h2{
+    font-size: 25px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Lato', sans-serif;;
+}
+
+
+/* HEADER  */
+header{
+    height: 50px;
+}
+.current_user_header {
+    padding: 0 24px;
+    color: #c9e2f1;
+    background: #2B7FC3;
+    border-top: 4px solid #1D5C8F;
+    border-bottom: 2px solid #D7D5D4;
+ }
+ 
+ .non_user_header{
+     padding-top: 10px;
+     padding-bottom: 10px;
+     margin-top: 20px;
+     text-align: center;
+ }
+
+ ul#main-nav{
+     float: right;
+ }
+
+
+ ul#main-nav li{
+     list-style-type: none;
+     float: left;
+     margin: 0;
+     height: 50px;
+ }
+
+ a{
+     text-decoration: none;
+ }
+
+
+ /*Log In Page*/
+ .credentials-content{
+     margin: 0 auto;
+     max-width: 480px;
+     width: 100%;
+     background-color: #fff;
+     font-weight: 700;
+     font-size: 14px;
+ }
+
+ .sign-in{
+     box-sizing: border-box;
+     padding: 1.5rem;
+ }
+
+ .field{
+     max-width: 480px;
+     margin-bottom: 10px;
+ }
+
+ input[type="submit" i],
+ button{
+     width: 100%;
+     text-align: center;
+     padding-left: 1.5rem;
+     padding-right: 1.5rem;
+     height: 44px;
+     margin-bottom: 1rem;
+     border-radius: 20px;
+     background-color: #fff;
+     border: 2px solid #000;
+     font-size: 15px;
+ }
+
+ input[type="submit" i]{
+     background-color: #085ff7;
+     border: 2px solid #085ff7;
+     color: #fff;
+ }
+
+ input[type="submit" i]:hover{
+    background-color: #044ecf;
+    border: 2px solid #044ecf;
+ }
+
+ button:hover{
+     background-color: #f2f2f2;
+ }
+
+ input[type="text" i],
+ input[type="email" i],
+ input[type="password" i]{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    height: 44px;
+    width: 98%;
+ }
+
+ .sign-title{
+    margin-bottom: 1rem;
+ }
+
+ .shared-links{
+     text-align: center;
+     font-size: 14px;
+     color: #085ff7;
+     padding: 5px;
+ }
+
+ .shared-links a{
+    color: #085ff7;
+}
+
+.shared-links a:hover{
+    text-decoration: underline;
+}

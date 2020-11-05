@@ -1,0 +1,14 @@
+<h1>Browse our Positons</h1>
+<div class="container">
+    <div class="row"> 
+        <div class="col-xs-6">
+            <% @positions.each do |position| %>
+                <h2><%= position.title %></h2><br>
+                <h3><%= position.company %></h3><br>
+                <h3><%= position.location %></h3><br>
+                <h4><%= Nokogiri::HTML(position[:description]).xpath("//text()").text.gsub("Description", "")%></h4><br><br>
+            <% end %>
+            
+        </div>
+    </div>
+</div>

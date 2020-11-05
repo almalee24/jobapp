@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+response = RestClient.get('https://jobs.github.com/positions.json?')
+json = JSON.parse(response.body, symbolize_names:true)
+json.each do |position|
+    Position.create(title: position[:title], description: position[:description], location: position[:location], url: position[:url])
+end
