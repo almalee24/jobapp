@@ -9,5 +9,5 @@
 response = RestClient.get('https://jobs.github.com/positions.json?')
 json = JSON.parse(response.body, symbolize_names:true)
 json.each do |position|
-    Position.create(title: position[:title], description: position[:description], location: position[:location], url: position[:url])
+    Position.create(title: position[:title],job_type: position[:type], description: position[:description], location: position[:location], url: position[:url])
 end

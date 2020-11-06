@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   resources :positions
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
-  get 'search', :to => 'articles#index'
-  root to: "positions#index"
+  get 'search', :to => 'positions#index', as: "search_path"
+  root to: "positions#home"
 end

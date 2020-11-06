@@ -34,6 +34,7 @@ gem 'omniauth-github', '~>1.4.0'
 gem 'omniauth-google-oauth2'
 gem 'rest-client'
 gem 'nokogiri'
+gem 'json'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

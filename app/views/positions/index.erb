@@ -1,10 +1,8 @@
-
-<h1>Welcome to Magic Job Portal</h1>
-<h4>Search by job title:</h4>
-
-<%= form_tag(search_path, :method => 'get') do %>
-    <%= text_field_tag :search, params[:search] %>
-    <span class="input-group-btn">
-        <%= submit_tag "Search" %>
-    </span>
-<% end %>
+<div class="positions-found-box">
+    <% @results.each do |position| %>
+        <div class="found-box">
+            <h3><%= position.title %></h3><br>
+            <h4><%= position.company %>-</h4>
+        </div>
+    <% end %>
+</div>

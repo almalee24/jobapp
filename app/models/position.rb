@@ -2,13 +2,9 @@ class Position < ApplicationRecord
     belongs_to :user
 
     def self.search(search)
-        if search 
-            keyword = Position.find_by(title: search)
-            if keyword
-                self.where(user_id: keyword)
-            else   
-                Position.all
-            end
+        binding.pry
+        if search && search != ""
+           self.all.where("lower(description) LIKE :search", search: "%#{search}%")
         else  
             Position.all
         end
