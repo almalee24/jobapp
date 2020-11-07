@@ -1,5 +1,9 @@
 class User < ApplicationRecord
   has_many :positions
+
+  has_many :favorite_positions
+  has_many :favorites, through: :favorite_positions, source: :position
+  
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,

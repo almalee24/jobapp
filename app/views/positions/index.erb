@@ -1,8 +1,8 @@
 <div class="positions-found-box">
     <% @results.each do |position| %>
         <div class="found-box">
-            <h3><%= position.title %></h3><br>
-            <h4><%= position.company %>-</h4>
+            <h3><%= link_to position.title, position_path(position) %></h3><br>
+            <h4><%= position.company %> - <%= position.jobtype %></h4>
         </div>
     <% end %>
 </div>

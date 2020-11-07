@@ -207,3 +207,20 @@ ion-icon{
     text-align: justify;
     font-weight: 400px;
 }
+
+.show-position{
+    width: 928px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #949494;
+    background-color: #fff;
+}
+
+.show-position-description{
+    width: 800px;
+    margin: 0 auto;
+}
+
+.dropbtn{
+    
+}
