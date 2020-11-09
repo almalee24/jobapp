@@ -21,7 +21,7 @@ This project is still under development and will continue to improve.
     - Delete 
 
 ## Clone the Repo
-    ```
+    ```bash
         $ git clone https://github.com/almalee24/jobapp
         $ cd job jobapp/
     ```
