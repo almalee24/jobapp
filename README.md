@@ -1,24 +1,35 @@
-# README
+# Magic Job Portal
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Magic Job Portal is a website for job listing. Where users can search numbers jobs online a
 
-Things you may want to cover:
+## Note
 
-* Ruby version
+This project is still under development and will continue to improve.
 
-* System dependencies
+## Features
 
-* Configuration
+- Search for positions
+    - search based on keywords
+- Favorites Page
+    - shows all positions favorited by user
+- Profile 
+    - Edit 
+    - Delete
+- Post Position
+    - Create
+    - Edit 
+    - Delete 
 
-* Database creation
+## Clone the Repo
+    ```
+        $ git clone https://github.com/almalee24/jobapp
+        $ cd job jobapp/
+    ```
 
-* Database initialization
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-* How to run the test suite
+Please make sure to update tests as appropriate.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
