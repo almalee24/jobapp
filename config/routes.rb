@@ -7,5 +7,10 @@ Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
   
   get 'search', :to => 'positions#index', as: "search_path"
-  root to: "positions#home"
+  
+  # devise_scope :user do 
+  #   root :to => 'devise/sessions#new'
+  # end
+
+  root :to => 'home#index'
 end

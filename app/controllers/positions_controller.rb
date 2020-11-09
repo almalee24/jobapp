@@ -1,4 +1,5 @@
 class PositionsController < ApplicationController
+    before_action :set_position, only: [:show, :edit, :update, :destroy]
     # def home
     #    @positions = Position.all
 
@@ -16,11 +17,49 @@ class PositionsController < ApplicationController
     end
 
     def show
-        @position = Position.find_by(id: params[:id])
+        if !@position
+            redirect_to positions_path
+        end
+    end
+
+    def new 
+        @position = Position.new
+    end
+
+    def create 
+        @position = Position.new(position_params)
+        if @position.save
+            redirect_to @position 
+        else  
+            render :new
+        end
+    end
+
+    def edit
+        if !@position
+            redirect_to positions_path
+        end
+    end
+
+    def update
+        if @position
+            @position.update(position_params)
+            if @position.errors.any?
+                render "edit"
+            else    
+                redirect_to @position
+            end
+        else   
+            render 'edit'
+        end
+    end
+
+    def destroy 
+        @position.destroy 
+        redirect_to positions_path
     end
 
     def favorite 
-        binding.pry
         type = params[:type]
         @position = Position.find_by(id: params[:id])
         if type == 'favorite'
@@ -34,7 +73,12 @@ class PositionsController < ApplicationController
         end
     end
 
+
     private 
+    def set_position
+        @position = Position.find_by_id(params[:id])
+    end
+
     def position_params
         params.require(:postion).permit(:title, :descritption, :company, :location, :url, :search_by_title)
     end
