@@ -28,7 +28,7 @@ class PositionsController < ApplicationController
 
     def create 
         @position = Position.new(position_params)
-        @position.user_id = current_user.id if current_user
+        @position.user_id = current_user.id
         if @position.save
             redirect_to @position 
         else  

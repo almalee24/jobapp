@@ -1,0 +1,9 @@
+
+<div class="positions-found-box">
+    <% @favorites.each do |f| %>
+        <div class="found-box">
+            <h3><%= link_to f.title, position_path(f) %></h3><br>
+            <h4><%= f.company %> - <%= f.jobtype %></h4>
+        </div>
+    <% end %>
+</div>
