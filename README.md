@@ -21,10 +21,9 @@ This project is still under development and will continue to improve.
     - Delete 
 
 ## Clone the Repo
-    ```bash
-        $ git clone https://github.com/almalee24/jobapp
-        $ cd job jobapp/
-    ```
+    $ git clone https://github.com/almalee24/jobapp
+    $ cd job jobapp/
+
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
