@@ -1,21 +1,19 @@
-<% if current_user %>
+<% if user_signed_in? %>
     <header class="current_user_header">
-            <div class="col-xs-8">
-            <div>
-                <h1><%= link_to "Magic Job Portal", root_path %></h1>
-                <h6>Magical job opportunities right a your fingertips!</h6>
-            </div>
-
+            <h1><%= link_to "Magic Job Portal", root_path %></h1>
             <ul class="main-nav">
                 <li><%= link_to "All Jobs", positions_path%></li>
-                <li>Post a job</li>
+                <li><%= link_to "Post Job", new_position_path %></li>
+                <li><%= link_to "Sign out", destory_user_session_path %></li>
+                <li><%= link_to "Edit your" %></li>
             </ul>
-            </div>
     </header>
 <% else  %>
     <header class="non_user_header">
         <div>
             <h1><%= link_to "Magic Job Portal", root_path %></h1>
+            <%= link_to "Sign in", new_user_session_path %>
+            <%= link_to "Sign up", new_user_registration_path %>
         </div>
     </header>
 <% end %>

@@ -28,6 +28,7 @@ class PositionsController < ApplicationController
 
     def create 
         @position = Position.new(position_params)
+        @position.user_id = current_user.id if current_user
         if @position.save
             redirect_to @position 
         else  
@@ -80,6 +81,6 @@ class PositionsController < ApplicationController
     end
 
     def position_params
-        params.require(:postion).permit(:title, :descritption, :company, :location, :url, :search_by_title)
+        params.require(:position).permit(:title, :description, :company, :location, :url, :jobtype)
     end
 end

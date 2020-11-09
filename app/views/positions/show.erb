@@ -2,6 +2,10 @@
     <div class="show-position-description">
         <div>
             <h5><%= @position.jobtype %>/<%= @position.location %><h5>
+            <% if @position.user_id == current_user.id %>
+                <%= link_to "Edit Position", edit_position_path(@position)%>
+                <%= link_to("Delete Position", @position, method: :delete, data:{confirm: "Do you really want to delete?"}) %>
+            <% end %>  
             <h1><%= @position.title %></h1> 
             <div class="dropdown">
                 <ion-icon name="heart-outline"></ion-icon>
