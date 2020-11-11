@@ -12,9 +12,12 @@
             </div>
 
             <div class="text-input">
-                <%= submit_tag "Find Jobs" %>
+                <%= submit_tag("Find Jobs", :onclick => "searchFunction()", :id => 'search') %>
             </div>
         <% end %>
+    </div>
+    <div >
+        <ul id="searchHistory"></ul>
     </div>
     <% else  %>
         <h2>Hey there!</h2>

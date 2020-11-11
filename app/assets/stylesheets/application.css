@@ -35,12 +35,13 @@ h1, h2, h3, h4, h5, h6 {
 /* HEADER  */
 header{
     height: 50px;
+    padding: 0 24px;
 }
 .current_user_header {
     padding: 0 24px;
     color: #c9e2f1;
-    background: #2B7FC3;
-    border-top: 4px solid #1D5C8F;
+    background: #fff;
+    /* border-top: 4px solid #1D5C8F; */
     border-bottom: 2px solid #D7D5D4;
  }
  
@@ -51,22 +52,91 @@ header{
      text-align: center;
  }
 
- ul#main-nav{
+ .main-nav{
      float: right;
  }
 
 
- ul#main-nav li{
+ .main-nav li{
      list-style-type: none;
      float: left;
-     margin: 0;
-     height: 50px;
+     padding: 16px;
+ }
+
+
+ .main-nav li:hover{
+    border-bottom: 2px solid #1D5C8F; 
  }
 
  a{
-     text-decoration: none;
+    text-decoration: none;
  }
 
+ .current_user_header h1{
+     float: left;
+     text-align: center;
+ }
+
+ .wrap{
+     padding-bottom: 60px;
+     margin: 0 auto;
+     width: 928px;
+ }
+
+ /*Dropdown Nav Button*/
+ .dropbtn{
+    background: none;
+    border: none;
+    padding: 10px;
+    height: 100%;
+ }
+
+ 
+
+ .dropdown {
+     position: relative;
+     display: inline-block;
+ }
+
+ .dropbtn:hover{
+    background-color: #fff;
+    border: 2px solid #1D5C8F; 
+    border-radius: 0;
+ }
+ .dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+ }
+ 
+ .dropdown-content a{
+     color: black;
+     padding: 12px 16px; 
+     text-decoration: none;
+     display: block;
+ }
+
+
+ .dropdown:hover .dropdown-content{
+     display: block;
+ }
+
+ .dropdown-content a:hover{
+    border-bottom: 2px solid #1D5C8F; 
+ }
+
+ .dropdown ion-icon{
+     font-size: 26px;
+ }
+
+ #searchHistory{
+     border: 1px solid green;
+     width: 400px;
+     height: 300px;
+     overflow: scroll;
+ }
 
  /*Log In Page*/
  .credentials-content{
@@ -155,68 +225,3 @@ ion-icon{
     font-size: 24px;
 }
 
-/* position search box */
-.position-search-box {
-    display: flex;
-    margin: 0 auto;
-}
-
-.jobsearch-Container{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.body-box{
-    margin-top: 100px;
-}
-
-.text-input-box{
-    background-color: #fff;
-    border: 1px solid #949494;
-    border-radius: 5px;
-    padding: 12px 16px;
-    font-weight: 700;
-    height:44px;
-    margin-right: 16px;
-    overflow: hidden;
-    width: 100%;
-}
-
-.text-input-box:focus{
-    border-color: #085ff7;
-}
-
-.text-input-box input[type="text" i]{
-    border: none;
-    outline: none;
-    width: 100%;
-}
-
-.positions-found-box{
-    width: 410px;
-    padding: 0 28px 9px 0;
-    margin: 0 auto;
-}
-
-.found-box{
-    border: 1px solid #d4d2d0;
-    padding: 1.25rem;
-    margin-top: 10px;
-    border-radius: 5px;
-    text-align: justify;
-    font-weight: 400px;
-}
-
-.show-position{
-    width: 928px;
-    margin: 0 auto;
-    padding: 20px;
-    border: 2px solid #949494;
-    background-color: #fff;
-}
-
-.show-position-description{
-    width: 800px;
-    margin: 0 auto;
-}

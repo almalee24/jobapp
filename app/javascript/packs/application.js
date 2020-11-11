@@ -15,3 +15,17 @@ require("channels")
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+var recentSearches = [];
+function searchFunction(data){
+    recentSearches.push($('#search_to_title').val());
+    $('#search_by_title').val("");
+    $("#searchHistory").text("");
+
+    $.each(recentSearches, function (index, value){
+        $('#searchHistory').append("<li class='historyItem'  onclick='addtotextbox("+index+")'>" + value + '</li>');
+    });
+}
+
+function addtotextbox(id){
+    $('#search_by_title').val(recentSearches[id]);
+}

@@ -1,13 +1,21 @@
 <% if user_signed_in? %>
     <header class="current_user_header">
+        <div class="wrap">
             <h1><%= link_to "Magic Job Portal", root_path %></h1>
             <ul class="main-nav">
-                <li><%= link_to "All Jobs", positions_path%></li>
-                <li><%= link_to "Post Job", new_position_path %></li>
-                <li><%= link_to "Sign Out", destroy_user_session_path %></li>
-                <li><%= link_to "Edit Profile", edit_user_registration_path%></li>
-                <li><%= link_to "Favorites", favorites_path%></li>
+                <div class="dropdown">
+                    <button class="dropbtn">
+                        <ion-icon name="person-outline"></ion-icon>
+                    </button>
+                    <div class="dropdown-content">
+                        <%= link_to "Sign Out", destroy_user_session_path %>
+                        <%= link_to "Edit Profile", edit_user_registration_path%>
+                        <%= link_to "Favorites", favorites_path%>
+                    </div>
+                </div>
+                <li><%= link_to "Employer/Post Job", new_position_path %></li>
             </ul>
+        </div>
     </header>
 <% else  %>
     <header class="non_user_header">
