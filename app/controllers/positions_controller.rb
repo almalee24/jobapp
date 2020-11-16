@@ -24,6 +24,7 @@ class PositionsController < ApplicationController
 
     def new 
         @position = Position.new
+        @position.companies.build
     end
 
     def create 
@@ -81,6 +82,6 @@ class PositionsController < ApplicationController
     end
 
     def position_params
-        params.require(:position).permit(:title, :description, :company, :location, :url, :jobtype)
+        params.require(:position).permit(:title, :description, :jobtype, companies_attributes: [:location, :name, :website])
     end
 end

@@ -1,7 +1,7 @@
 <div class="show-position">
     <div class="show-position-description">
         <div>
-            <h5><%= @position.jobtype %>/<%= @position.location %><h5>
+            <h5><%= @position.jobtype %>/<%= @position.company.location %><h5>
             <% if @position.user_id == current_user.id %>
                 <%= link_to "Edit Position", edit_position_path(@position)%>
                 <%= link_to("Delete Position", @position, method: :delete, data:{confirm: "Do you really want to delete?"}) %>
@@ -11,8 +11,8 @@
                 <ion-icon name="heart-outline"></ion-icon>
                 <div class="dropdown-content">
                     <% if current_user %>
-                        <li><%= link_to "Favorite", favorite_position_path(@position, type: "favorite"), method: :put %></li>
-                        <li><%= link_to "Unfavorite", favorite_position_path(@position, type: "unfavorite"), method: :put %></li>
+                        <%= link_to "Favorite", favorite_position_path(@position, type: "favorite"), method: :put %>
+                        <%= link_to "Unfavorite", favorite_position_path(@position, type: "unfavorite"), method: :put %>
                     <% end %>
                 </div>
             </div>

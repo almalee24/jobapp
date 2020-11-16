@@ -131,12 +131,12 @@ header{
      font-size: 26px;
  }
 
- #searchHistory{
+ /* #searchHistory{
      border: 1px solid green;
      width: 400px;
      height: 300px;
      overflow: scroll;
- }
+ } */
 
  /*Log In Page*/
  .credentials-content{
@@ -223,5 +223,69 @@ header{
 ion-icon{
     float: left;
     font-size: 24px;
+}
+
+/* New Job Post */
+.job-post label{
+    font-size: 20px;
+}
+
+
+.job-post input{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    height: 44px;
+    width: 98%;
+}
+
+.job-post #position_location{
+    width: 30%;
+}
+
+.job-post select{
+    height:35px;
+    width: 20%;
+}
+
+
+.job-post textarea{
+    width: 80%;
+    height: 100px
+}
+
+.job-post{
+    height: 100%x;
+    width: 100%;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 20px;
+}
+
+.jobpost-btn{
+    background-color: #085ff7;
+    border: 2px solid #085ff7;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.jobpost-btn:hover{
+    background-color: #044ecf;
+    border: 2px solid #044ecf;
+}
+
+.edit-profile .edit-profile-other{
+    text-align: center;
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+.button_to input{
+    background-color: none;
+    border: none;
+    color: #044ecf;
+    font-size: 12px;
 }
 

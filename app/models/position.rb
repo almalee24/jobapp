@@ -1,5 +1,7 @@
 class Position < ApplicationRecord
     belongs_to :user, optional: true
+    has_many :companies, dependent: :destroy
+    accepts_nested_attributes_for :companies, reject_if: proc { |attributes| attributes['name'].blank? || attributes['website'].blank? || attributes['location'].blank?}
     
     has_many :favorite_positions
     has_many :favorited_by, through: :favorite_positions, source: :user

@@ -1,0 +1,11 @@
+<% if @position %>
+    <h1><%= link_to @position.title, position_path(@position) %>'s company:</h1>
+<% else %>
+    <h1>Here are the companies details:</h1>
+<% end %>
+
+<ul>
+    <% @companies.each do |c| %>
+        <li><%= link_to c.name, position_company_path(@position, i) %></li>
+    <% end %>
+</ul>
